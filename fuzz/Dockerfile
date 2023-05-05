@@ -23,3 +23,5 @@ COPY --from=builder /vi-rs/fuzz/target/x86_64-unknown-linux-gnu/release/telex /
 COPY --from=builder /vi-rs/fuzz/target/x86_64-unknown-linux-gnu/release/vni /
 
 COPY --from=builder /vi-rs/fuzz/target/x86_64-unknown-linux-gnu/release/word_validation /
+
+COPY --from=builder /vi-rs/fuzz/target/x86_64-unknown-linux-gnu/release/word_validation_arbitrary /

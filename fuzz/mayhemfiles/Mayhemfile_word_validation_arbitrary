@@ -1,0 +1,7 @@
+project: vi-rs
+target: word_validation_arbitrary
+duration: 90
+
+cmds:
+    - cmd: /word_validation_arbitrary
+
