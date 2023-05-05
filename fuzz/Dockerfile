@@ -18,4 +18,6 @@ FROM --platform=linux/amd64 rustlang/rust:nightly
 
 ## TODO: Change <Path in Builder Stage>
 
-COPY --from=builder /vi-rs/fuzz/target/x86_64-unknown-linux-gnu/release/transform /
+COPY --from=builder /vi-rs/fuzz/target/x86_64-unknown-linux-gnu/release/telex /
+
+COPY --from=builder /vi-rs/fuzz/target/x86_64-unknown-linux-gnu/release/vni /

@@ -54,7 +54,8 @@ jobs:
       fail-fast: false
       matrix:
         mayhemfile:
-        - fuzz/mayhemfiles/Mayhemfile_transform
+        - fuzz/mayhemfiles/Mayhemfile_telex
+        - fuzz/mayhemfiles/Mayhemfile_vni
     steps:
     - uses: actions/checkout@v3
     - name: Start analysis for ${{ matrix.mayhemfile }}

@@ -1,0 +1,7 @@
+project: vi-rs
+target: vni
+duration: 90
+
+cmds:
+    - cmd: /vni
+

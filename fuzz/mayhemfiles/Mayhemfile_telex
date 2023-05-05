@@ -1,0 +1,7 @@
+project: vi-rs
+target: telex
+duration: 90
+
+cmds:
+    - cmd: /telex
+
