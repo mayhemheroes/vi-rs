@@ -1,6 +1,6 @@
 #![no_main]
 use libfuzzer_sys::fuzz_target;
-use vi::telex;
+use vi::validation;
 
 const SINGLE_INITIAL_CONSONANTS: &[&'static str] =
     &["b", "c", "d", "đ", "g", "h", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "x",];
@@ -35,6 +35,5 @@ fuzz_target!(|value: (usize, usize, usize, bool, bool)| {
 
     s += FINAL_CONSONANTS[value.2 % FINAL_CONSONANTS.len()];
 
-    let mut result = String::new();
-    telex::transform_buffer(s.chars(), &mut result);
+    assert!(validation::is_valid_word(&s));
 });

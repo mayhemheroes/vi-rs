@@ -56,6 +56,7 @@ jobs:
         mayhemfile:
         - fuzz/mayhemfiles/Mayhemfile_telex
         - fuzz/mayhemfiles/Mayhemfile_vni
+        - fuzz/mayhemfiles/Mayhemfile_word_validation
     steps:
     - uses: actions/checkout@v3
     - name: Start analysis for ${{ matrix.mayhemfile }}

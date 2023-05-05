@@ -29,3 +29,9 @@ name = "vni"
 path = "fuzz_targets/vni.rs"
 test = false
 doc = false
+
+[[bin]]
+name = "word_validation"
+path = "fuzz_targets/word_validation.rs"
+test = false
+doc = false
