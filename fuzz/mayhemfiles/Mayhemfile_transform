@@ -1,0 +1,7 @@
+project: vi-rs
+target: transform
+duration: 90
+
+cmds:
+    - cmd: /transform
+
