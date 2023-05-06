@@ -1,0 +1,6 @@
+project: vi-rs
+target: parsing-fuzz
+
+cmds:
+    - cmd: ./parsing-fuzz
+      libfuzzer: true

@@ -2,8 +2,6 @@
 
 use libfuzzer_sys::fuzz_target;
 
-use vi::vni;
-use vi::validation;
 use vi::parsing;
 
 fuzz_target!(|data: (u8, &str)| {
@@ -14,12 +12,6 @@ fuzz_target!(|data: (u8, &str)| {
             parsing::parse_word(in_string);
         },
         1 => {
-            vni::transform_buffer(in_string.chars(), &mut result);
-        },
-        2 => {
-            validation::is_valid_word(in_string);
-        },
-        3 => {
             parsing::parse_vowel(in_string);
         }
         _ => ()

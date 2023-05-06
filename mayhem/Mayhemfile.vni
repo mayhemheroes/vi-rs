@@ -1,0 +1,6 @@
+project: vi-rs
+target: vni-fuzz
+
+cmds:
+    - cmd: ./vni-fuzz
+      libfuzzer: true

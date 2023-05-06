@@ -21,7 +21,19 @@ members = ["."]
 debug = 1
 
 [[bin]]
-name = "vi-fuzz"
-path = "fuzz_targets/vi-fuzz.rs"
+name = "vni-fuzz"
+path = "fuzz_targets/vni-fuzz.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "parsing-fuzz"
+path = "fuzz_targets/parsing-fuzz.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "validation-fuzz"
+path = "fuzz_targets/validation-fuzz.rs"
 test = false
 doc = false
