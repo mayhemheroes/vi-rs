@@ -2,7 +2,7 @@ project: vi-rs
 target: vi-fuzz
 
 testsuite:
-  - file:///mayhem/corpus
+  - file://mayhem/corpus
 
 cmds:
     - cmd: ./vi-fuzz
