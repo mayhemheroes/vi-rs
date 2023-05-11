@@ -1,0 +1,6 @@
+project: vi-rs
+target: validation-fuzz
+
+cmds:
+    - cmd: ./validation-fuzz
+      libfuzzer: true

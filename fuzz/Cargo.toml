@@ -1,0 +1,39 @@
+[package]
+name = "vi-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.vi]
+path = ".."
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "vni-fuzz"
+path = "fuzz_targets/vni-fuzz.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "parsing-fuzz"
+path = "fuzz_targets/parsing-fuzz.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "validation-fuzz"
+path = "fuzz_targets/validation-fuzz.rs"
+test = false
+doc = false
